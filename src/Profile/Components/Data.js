@@ -3,7 +3,16 @@ import PropTypes from "prop-types";
 
 const Data = (props) => {
   const getStyle = { background: "#ebebeb", textAlign: "center" };
-  const buttonStyle ={backgroundColor:"#ccffcc",padding:"0.5rem"}
+  const buttonStyle = {
+    backgroundColor: "#ccffcc",
+    borderColor: "#ccffcc",
+    borderRadius: "5px",
+    padding: "0.5rem",
+  };
+
+  const handleName = () =>
+    alert(`Congratulations Hafeez, You've come this far`);
+    
   return (
     <div style={getStyle} className="main-container">
       <div>{props.children}</div>
@@ -27,8 +36,8 @@ const Data = (props) => {
       <div>
         <span>
           <div className="button">
-            <button style={buttonStyle}onClick={props.handleName}> 
-            Click Me !!!
+            <button style={buttonStyle} onClick={handleName}>
+              Click Me !!!
             </button>
           </div>
         </span>
